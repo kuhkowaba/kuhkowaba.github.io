@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>мазззььь</title>
+</head>
+<style>
+    html {
+        background-color: orange;
+    }
+    body {
+        background-image: url('bg.jpg');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+        margin: 0;
+    }
+    .container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    h1 {
+        background: rgba(248,80,50,1);
+        background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(255,162,0,1) 14%, rgba(247,255,0,1) 29%, rgba(0,255,0,1) 45%, rgba(0,255,225,1) 59%, rgba(0,9,255,1) 74%, rgba(204,0,255,1) 88%, rgba(231,56,39,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(14%, rgba(255,162,0,1)), color-stop(29%, rgba(247,255,0,1)), color-stop(45%, rgba(0,255,0,1)), color-stop(59%, rgba(0,255,225,1)), color-stop(74%, rgba(0,9,255,1)), color-stop(88%, rgba(204,0,255,1)), color-stop(100%, rgba(231,56,39,1)));
+        background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(255,162,0,1) 14%, rgba(247,255,0,1) 29%, rgba(0,255,0,1) 45%, rgba(0,255,225,1) 59%, rgba(0,9,255,1) 74%, rgba(204,0,255,1) 88%, rgba(231,56,39,1) 100%);
+        background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(255,162,0,1) 14%, rgba(247,255,0,1) 29%, rgba(0,255,0,1) 45%, rgba(0,255,225,1) 59%, rgba(0,9,255,1) 74%, rgba(204,0,255,1) 88%, rgba(231,56,39,1) 100%);
+        background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(255,162,0,1) 14%, rgba(247,255,0,1) 29%, rgba(0,255,0,1) 45%, rgba(0,255,225,1) 59%, rgba(0,9,255,1) 74%, rgba(204,0,255,1) 88%, rgba(231,56,39,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .header {
+        font-size: 3rem;
+        display: flex;
+        margin-bottom: 0;
+        margin-top: 5rem;
+    }
+    
+    .header ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-shadow: #47474750 3px 5px 2px;
+    }
+
+    .animate {
+        height: 50%;
+        overflow: hidden;
+        margin: 0 0.5rem;
+    }
+
+    @keyframes change {
+        10% { transform: translateY(-50%); }
+        35% { transform: translateY(0); }
+        65% { transform: translateY(0); }
+        90% { transform: translateY(-50%); }
+    }
+
+    .animate ul {
+        transform: translateY(-50%);
+        animation: change 3s ease-in-out infinite;
+    }
+
+    .animate ul li {
+        -webkit-text-fill-color: orange;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn button {
+        margin: 0 2.5rem;
+        background-color: orange;
+        border: 5px solid pink;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    pre {
+        color: white;
+        text-shadow: 1px 1px 2px #000;
+        font-size: 1rem;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <img src="earth.gif" alt="">
+        <h1 class="header">
+            <span>Анекдоты про </span>
+            <div class="animate">
+                <ul>
+                    <li>пчелу</li>
+                    <li>мазь</li>
+                </ul>
+            </div>
+            <span>! ! !</span>
+        </h1>
+        <img src="fire.gif" alt="">
+        <div>
+            <pre id="anek_place">Заходит как-то пчела в аптеку, спрашивает:<br>- У вас есть мазззььз?<br>Аптекарша отвечает:<br>- Есть<br>- Заебизззьзььь</pre>
+        </div>
+        <div class="btn">
+            <img src="click.gif" style="transform: rotate(90deg);" alt="">
+            <button id="get_anek">новый анек</button>
+            <img src="click.gif" style="transform: rotate(90deg) scale(1, -1)" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        function shuffle(array) {
+            let currentIndex = array.length,  randomIndex;
+
+            // While there remain elements to shuffle.
+            while (currentIndex != 0) {
+
+                // Pick a remaining element.
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+            }
+
+            return array;
+        }
+        
+        function getAnek() {
+            const data = [
+                'пчела', 
+                'аптека', 
+                'мазззььз', 
+                'аптекарша', 
+                'заебиззззьь',
+                'понос',
+                'драйв',
+                'мазок',
+                'шляпа',
+                'Хуй',
+                'Пизда',
+                'сковорода',
+                'мать антона',
+                'моя мать',
+                'Кирилл',
+                'Антон',
+                'Егор',
+                'Ситуация',
+                'Нюанс',
+                'Петька',
+                'Карлик',
+                'ЖЖЖМель',
+                'Бочка',
+                'Бабка',
+                'Панк',
+                'Банк',
+                'Сперма',
+                'Невротик',
+                'Испанцы',
+                'Медведь',
+                'Шлюха',
+                'Грузин',
+                'Вовочка',
+                'Трусы',
+                'Очко',
+                'Пенис',
+                'Хер',
+                'Давалка',
+            ];
+            const random = shuffle(data)
+            let nouns = {}
+            for (let i = 0; i < 5; i++) {
+                nouns[`w${i}`] = random[i]
+            }
+            return `Заходит как-то ${nouns.w0} в ${nouns.w1}, спрашивает:<br>- У вас есть ${nouns.w2}?<br>${nouns.w3} отвечает:<br>- Есть<br>- ${nouns.w4}`
+        }
+        const place = document.getElementById('anek_place')
+        document.getElementById('get_anek').addEventListener('click', () => {
+            const anek = getAnek()
+            anek_place.innerHTML = anek;
+        })
+    </script>
+</body>
+</html>

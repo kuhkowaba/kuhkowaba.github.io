@@ -1,0 +1,22 @@
+{
+  "name": "mazzz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx browser-sync --watch",
+    "push": "git add . && git commit -m \"init\" && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuhkowaba/kuhkowaba.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuhkowaba/kuhkowaba.github.io/issues"
+  },
+  "homepage": "https://github.com/kuhkowaba/kuhkowaba.github.io#readme"
+}
